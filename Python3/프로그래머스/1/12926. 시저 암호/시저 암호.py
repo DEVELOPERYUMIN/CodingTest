@@ -21,3 +21,29 @@ def solution(s, n):
 
     return answer
 
+
+'''
+같은 코드 string 에 아스키 있음 
+from string import ascii_lowercase, ascii_uppercase
+
+lower = list(ascii_lowercase)  # ['a' ... 'z']
+upper = list(ascii_uppercase)  # ['A' ... 'Z']
+
+def solution(s, n):
+    result = ""
+
+    for ch in s:
+        if ch == " ":
+            result += " "  # 공백은 그대로
+
+        elif ch in lower:  # 소문자
+            i = lower.index(ch)
+            result += lower[(i + n) % 26]
+
+        elif ch in upper:  # 대문자
+            i = upper.index(ch)
+            result += upper[(i + n) % 26]
+
+    return result
+
+''' 
